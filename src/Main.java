@@ -7,16 +7,8 @@ public class Main {
 
         System.out.println(list);
 
+        List<String> convertedlist = Sweet.getSweetconverted();
 
-        // StreamAPIを試す
-        List converted = list.stream()
-                // cで始まる文字列のみ通す
-                .filter(sweets -> sweets.startsWith("c")).toList()
-                // 大文字に変換
-                .stream().map(sweets -> sweets.toUpperCase())
-                // Listにまとめる
-                .toList();
-
-        converted.forEach(System.out::println);
+        convertedlist.forEach(System.out::println);
     }
 }
